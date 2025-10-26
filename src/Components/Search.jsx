@@ -9,7 +9,7 @@ export const Search = ({ setCountry, total }) => {
 		if (getregion) {
 			getregion !== "null"
 				? setCountry(getCountries({ region: getregion, nombre: getinput }))
-				: setCountry(getCountries({ nombre: getinput }));
+				: setCountry(getCountries({ nombre: getinput.toLowerCase() }));
 		}
 		if (!getregion) {
 			setregion("null");
