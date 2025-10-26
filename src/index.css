@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Nunito Sans";
+}
+:root {
+	--dme: hsl(209, 23%, 22%);
+	--dmb: hsl(207, 26%, 17%);
+	--dmt: hsl(0, 100%, 100%);
+	--lmt: hsl(200, 15%, 8%);
+	--lmi: hsl(0, 0%, 50%);
+	--lmb: hsl(0, 7%, 92%);
+	--lme: hsl(0, 100%, 100%);
+}
+html {
+	color-scheme: dark;
+}
+body {
+	background-color: var(--dmb);
+}
+
+.main-container {
+	background-color: var(--dmb);
+	color: var(--dmt);
+}
+
+.country-wrapper {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+	justify-content: start;
+	gap: 2rem;
+	/* overflow: hidden; */
+}
+.country-page {
+	display: flex;
+	flex-direction: column;
+	padding: 3rem;
+	gap: 3rem;
+}
+.menu {
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem 4rem;
+	background-color: var(--dme);
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100%;
+	gap: 2rem;
+}
+.menu > div {
+	cursor: pointer;
+}
+.container-theme {
+	gap: 1.5rem;
+	display: flex;
+	position: relative;
+}
+.container-theme svg {
+	transition: 0.3s ease-in;
+	position: absolute;
+	top: 10%;
+	left: 0;
+}
+.inactive {
+	opacity: 0;
+	pointer-events: none;
+	visibility: hidden;
+	scale: 0;
+}
+.active {
+	opacity: 1;
+	scale: 1.5;
+}
+.country-container {
+	max-width: 330px;
+	background-color: var(--dme);
+	border-radius: 10px;
+	font-size: 14px;
+	overflow: hidden;
+}
+/* .countr-img-container {
+	width: 80%;
+} */
+.country-img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+}
+.country-data {
+	padding: 2rem 1.5rem 3rem 1.5rem;
+}
+.fw-s {
+	font-weight: 300;
+	margin-top: 0.5rem;
+}
+.fw-m {
+	font-weight: 600;
+}
+.fw-l {
+	font-weight: 800;
+}
+.fs {
+	font-size: 14px;
+}
+.fl {
+	font-size: 16px;
+}
+.search-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+}
+.search-wrapper > select {
+	padding: 1rem;
+	border: none;
+	background-color: var(--dme);
+	border-radius: 10px;
+	width: max-content;
+	justify-self: end;
+}
+.input input {
+	width: 100%;
+	border: none;
+	padding: 1rem 0 1rem 3rem;
+	border-radius: inherit;
+	background-color: var(--dme);
+	color: var(--dmt);
+}
+.input {
+	display: flex;
+	position: relative;
+	width: 100%;
+	border: none;
+	border-radius: 10px;
+}
+.search-icon {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 1rem;
+}
+
+body:has([data-theme="light"]) {
+	--dmb: var(--lmb);
+	--dme: var(--lme);
+	--dmt: var(--lmt);
+	color-scheme: ligth;
+}
+.country-details {
+	font-size: 16px;
+	display: flex;
+	flex-direction: column;
+	padding: 1rem 3rem;
+	justify-content: center;
+}
+.border-country-item,
+.return-btn {
+	padding: 0.5rem 1rem;
+	background-color: var(--dme);
+	text-decoration: none;
+	color: var(--dmt);
+	margin: 0.5rem;
+	border-radius: 10px;
+}
+.return-btn {
+	width: max-content;
+	padding: 0.5rem 3rem;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+.border-countries {
+	display: flex;
+	flex-wrap: wrap;
+}
+.border-countries-wrapper {
+	display: grid;
+	padding: 2rem 0;
+}
+.country-details-items {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 3rem;
+}
+.country-details-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+	margin-top: 2rem;
+}
+.country-details-img {
+	width: 100%;
+	height: auto;
+}
+.country-details-wrapper {
+	display: grid;
+	align-items: center;
+	padding: 3rem;
+}
+.country-container:hover {
+	outline: 3px solid red;
+	cursor: pointer;
+}
+.country-details-img-container {
+	width: auto;
+}
+@media (max-width: 768px) {
+	.search-wrapper {
+		grid-template-columns: 1fr;
+	}
+	.search-wrapper > select {
+		justify-self: start;
+	}
+	.country-details-container {
+		grid-template-columns: 100%;
+	}
+	.country-details-items {
+		grid-template-columns: 1fr;
+		gap: 3rem;
+	}
+}
+@media (max-width: 730px) {
+	.country-wrapper {
+		grid-template-columns: 1fr;
+	}
+	.country-container {
+		max-width: 100%;
+	}
+}

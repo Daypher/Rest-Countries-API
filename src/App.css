@@ -1,9 +1,0 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
-:root {
-	--dme: hsl(209, 23%, 22%);
-	--dmb: hsl(207, 26%, 17%);
-	--lmt: hsl(200, 15%, 8%);
-	--lmi: hsl(0, 0%, 50%);
-	--lmb: hsl(0, 0%, 99%);
-	--dm: hsl(0, 100%, 100%);
-}
