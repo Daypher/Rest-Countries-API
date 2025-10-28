@@ -11,6 +11,7 @@ export const Country = ({ data }) => {
 				<img
 					src={data.flag}
 					className="country-img"
+					alt={data.name}
 				/>
 			</div>
 			<div className="country-data">
